@@ -1,0 +1,41 @@
+-- tests.txt
+print "========== UNKNOT TESTS =========="
+let ukt00 = []                        -- not a knot
+let ukt01 = [('a', 'o'), ('a', 'u')]  -- not a knot
+let ukt02 = [('a', 'u'), ('a', 'o')]  -- not a knot
+let ukt03 = [('a', 'u'), ('b', 'u'), ('b', 'o'), ('a', 'u')] -- not a knot
+let ukt04 = [('c', 'o'), ('d', 'o'), ('a', 'u'), ('b', 'u'), ('b', 'o'), ('a', 'u'), ('c', 'u'), ('d', 'u')] -- not a knot
+let ukt05 = [('c', 'o'), ('d', 'o'), ('a', 'u'), ('b', 'u'), ('b', 'o'), ('a', 'u'), ('d', 'u'), ('c', 'u')] -- not a knot
+let ukt06 = [('c', 'o'), ('d', 'o'), ('a', 'o'), ('b', 'u'), ('b', 'o'), ('a', 'u'), ('d', 'u'), ('e', 'o'), ('e', 'u'), ('c', 'u')] -- not a knot
+let ukt07 = [('c', 'o'), ('d', 'o'), ('a', 'u'), ('b', 'u'), ('b', 'o'), ('d', 'u'), ('e', 'o'), ('e', 'u'), ('c', 'u'), ('a', 'u')] -- not a knot
+
+show ukt00
+unKnot ukt00
+show ukt01
+unKnot ukt01
+show ukt02
+unKnot ukt02
+show ukt03
+unKnot ukt03
+show ukt04
+unKnot ukt04
+show ukt05
+unKnot ukt05
+show ukt06
+unKnot ukt06
+show ukt07
+unKnot ukt07
+
+
+print "========== KNOT TESTS =========="
+let kt00 = [('a', 'o')] -- knot
+let kt01 = [('a', 'o'), ('b', 'o'), ('a', 'u'), ('b', 'o')] -- knot
+let kt02 = [('a', 'o'), ('b', 'o'), ('c', 'o'), ('a', 'u'), ('b', 'o'), ('c', 'u')] -- knot
+
+
+show kt00
+unKnot kt00
+show kt01
+unKnot kt01
+show kt02
+unKnot kt02
